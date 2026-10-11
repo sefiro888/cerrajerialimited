@@ -31,6 +31,7 @@ for name,p in pages.items():
         if u.fragment and dest in pages and unquote(u.fragment) not in pages[dest].ids:errors.append(f'{name}: missing anchor {href}')
 css=(root/'assets/style.css').read_text(encoding='utf-8')
 for asset in re.findall(r'url\([\"\']?([^\)\"\']+)',css):
+    if asset.startswith('data:'):continue
     if not (root/'assets'/asset).exists():errors.append(f'CSS missing {asset}')
 if errors:raise SystemExit('\n'.join(errors))
 print(f'OK: {len(pages)} pages, all local links, anchors, images and fonts exist; one h1 per page.')

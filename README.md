@@ -1,6 +1,6 @@
 # Cerrajería Limited — propuesta de web
 
-Ocho páginas HTML independientes, sin instalación ni compilación para visualizarlas. El sitio completo está en `dist/`.
+Ocho páginas HTML independientes (v2: cinta de avisos animada, menú móvil a pantalla completa, selector «¿qué te ha pasado?», contadores, aparición suave al hacer scroll), sin instalación ni compilación para visualizarlas. El sitio completo está en `dist/`.
 
 ## Vista local
 
@@ -37,3 +37,13 @@ Logo aportado conservado en `dist/assets/identidad.webp`. Imágenes ilustrativas
 Los prompts completos se conservan en `image-prompts.json`. Las imágenes son ambientales y no representan las instalaciones, empleados o vehículos reales del negocio.
 
 Tipografía: Barlow Condensed Bold, de Google Fonts, almacenada localmente.
+
+## Imágenes opcionales (v2)
+
+Si copias a `dist/assets/` un `hero-home.webp` o un `van-guadalajara.webp`, `build.py` los usará automáticamente al ejecutar `python build.py`; si no existen, usa las imágenes anteriores. Los prompts están en `image-prompts.json`.
+
+## Datos pendientes de confirmar con el titular
+
+- Teléfono: 672 826 060 (logo, Páginas Amarillas, Instagram nuevo) frente a 624 218 073 (flyers antiguos).
+- Precios de los flyers: 60 € (mando), 99 € (copia) y 110 € (oferta, días 1-6). No se publican hasta confirmar cuál está vigente.
+- Frases tomadas de sus flyers y Páginas Amarillas: «a domicilio sin coste adicional», «fabricación y programación en el acto», «sin grúa», «24 h, 365 días», pago con tarjeta (Visa/Mastercard).

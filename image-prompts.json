@@ -1,5 +1,63 @@
 {
-  "hero": "Use case: ads-marketing. Create a photorealistic ultrawide cinematic website hero photograph, 3:2 landscape. Premium black sporty European car front three-quarter on RIGHT half of frame at night in an understated dark industrial setting, foreground RIGHT close-up of a real unbranded black car remote key with metal blade on a dark surface. LEFT half is deep charcoal atmospheric negative space for HTML heading overlay. Restrained red accent lights reflecting on black car paint, white headlights, realistic steel and rubber, elegant automotive magazine photography. No writing, no branding, no logos, no posters, no collage. Black white red palette. Horizontal wide composition.",
-  "keys": "Use case: photorealistic-natural. Landscape automotive locksmith editorial photograph. Close-up of gloved technician hands programming a black unbranded car remote key on an organized workbench, realistic key cutting machine and diagnostic tablet nearby, out of focus car in dark workshop background. Subject on RIGHT two-thirds, dark uncluttered LEFT area for overlay title. Subtle red accent lighting, neutral white task lighting, black and charcoal palette, high quality realistic professional commercial photograph. No text, no branding, no readable tablet UI, no montage.",
-  "mobile": "Use case: photorealistic-natural. Wide landscape cinematic commercial photograph of mobile automotive locksmith assistance at dusk in Spain. White unbranded service van with side door open showing orderly lit equipment, professional technician in black work clothing beside a dark passenger car, photographed from behind, on RIGHT half of frame. LEFT is quiet dark open street negative space for heading. Restrained red reflection, blue hour neutral charcoal mood, realistic architectural background without recognizable landmarks. No text, no logos, no emergency lights, no uniforms implying police. Premium believable editorial image, no collage."
+  "_estilo_comun": "Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema.",
+  "hero-home": {
+    "tamano": "2400x1350 (16:9)",
+    "uso": "Portada",
+    "prompt": "Fotografía panorámica nocturna en una plaza española con un palacio histórico iluminado y desenfocado al fondo. Mitad derecha: coche negro deportivo en tres cuartos frontal con faros blancos; en primer plano, una llave con mando plegable negra genérica sobre asfalto mojado con reflejos rojos. El 45% izquierdo de la imagen debe ser oscuro, limpio y vacío (para el titular). Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "hero-servicios": {
+    "tamano": "2400x1350",
+    "uso": "Cabecera Servicios",
+    "prompt": "Banco de trabajo de cerrajero de automoción visto desde arriba en ángulo: máquina de cortar llaves, llaves en bruto, mandos, tablet de diagnóstico con pantalla desenfocada ilegible y herramientas ordenadas. Luz de trabajo blanca y un acento rojo. Lado izquierdo oscuro y limpio. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "hero-perdida": {
+    "tamano": "2400x1350",
+    "uso": "Cabecera Pérdida de llaves",
+    "prompt": "Calle urbana de noche. Un coche oscuro aparcado, y una persona de espaldas junto a la puerta mirando el móvil, con aspecto de estar esperando ayuda. A la derecha, asoma el lateral de una furgoneta blanca sin rotulación. Reflejos rojos de luces de freno en el asfalto. Izquierda oscura y vacía. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "hero-copia": {
+    "tamano": "2400x1350",
+    "uso": "Cabecera Copias de llaves",
+    "prompt": "Macro de una llave con mando plegable negra genérica y una llave de tarjeta, junto a una llave metálica recién cortada con virutas brillantes, sobre superficie negra con reflejo. Luz lateral roja. Fondo desenfocado de taller. Izquierda despejada. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "hero-apertura": {
+    "tamano": "2400x1350",
+    "uso": "Cabecera Apertura",
+    "prompt": "Primer plano de la manilla de la puerta de un coche negro con gotas de lluvia, y reflejado en el cristal un atardecer rojizo. Interior del coche apenas visible. Sensación de calma y control. Izquierda oscura. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "hero-cobertura": {
+    "tamano": "2400x1350",
+    "uso": "Cabecera Cobertura",
+    "prompt": "Vista aérea nocturna de una ciudad española con carreteras iluminadas en rojo y ámbar que se cruzan; una furgoneta blanca diminuta circulando por una de ellas. Profundidad de campo suave. Izquierda oscura. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "hero-contacto": {
+    "tamano": "2400x1350",
+    "uso": "Cabecera Contacto",
+    "prompt": "Interior de un coche de noche: mano sosteniendo un móvil con luz cálida (pantalla ilegible) junto a un salpicadero oscuro con luces rojas suaves. Ambiente tranquilo y cercano. Izquierda oscura. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "van-guadalajara": {
+    "tamano": "1800x1200 (3:2)",
+    "uso": "Home y Cobertura (bloque con foto)",
+    "prompt": "Furgoneta blanca de cerrajero móvil sin rotulación, al atardecer, con la puerta lateral abierta mostrando un taller interior ordenado e iluminado (máquina de cortar llaves, cajones de llaves en bruto, tablet de diagnóstico). Un técnico con ropa de trabajo negra, de espaldas, junto a un coche oscuro. Calle tranquila española, farolas cálidas y cielo azul hora azul. Sujeto a la derecha, izquierda oscura. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "tecnico-programando": {
+    "tamano": "1800x1200",
+    "uso": "Servicios · Electrónica",
+    "prompt": "Manos con guantes conectando una interfaz de diagnóstico al puerto OBD de un coche moderno; tablet con pantalla ilegible desenfocada; una llave con mando negra genérica sobre el salpicadero. Interior oscuro, acento rojo suave, poca profundidad de campo. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "taller-movil": {
+    "tamano": "1800x1200",
+    "uso": "Pérdida de llaves (bloque con foto)",
+    "prompt": "Interior de un taller móvil en furgoneta: un técnico con guantes corta una llave nueva en una máquina de cortar, virutas brillantes, cajones etiquetados sin texto legible, iluminación blanca fría con acento rojo. Plano medio, sensación de profesionalidad y rapidez. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "llave-copia": {
+    "tamano": "1800x1200",
+    "uso": "Copias de llaves (bloque con foto)",
+    "prompt": "Macro de una máquina cortando una llave de coche, chispas y virutas de latón brillantes, una llave con mando plegable negra y una llave de tarjeta genéricas al lado sobre banco oscuro. Luz lateral dramática con acento rojo. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  },
+  "apertura-coche": {
+    "tamano": "1800x1200",
+    "uso": "Apertura de vehículos (bloque con foto)",
+    "prompt": "Técnico con guantes junto a la puerta de un coche negro al anochecer utilizando una cuña inflable y una varilla profesional con cuidado y precisión, sin dañar la pintura; luz de linterna suave. Ambiente profesional y tranquilo. Sin ser un robo: ropa de trabajo y furgoneta blanca sin rotulación al fondo. Estilo común: fotografía realista de revista de automoción, iluminación cinematográfica, paleta negro carbón + rojo intenso + toques ámbar cálido, alto contraste, poco ruido. SIN texto, SIN logotipos, SIN marcas reales, SIN matrículas legibles, SIN collage. Llaves y mandos genéricos sin emblema."
+  }
 }
