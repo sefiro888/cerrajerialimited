@@ -9,6 +9,42 @@ A = D / 'assets'
 A.mkdir(parents=True, exist_ok=True)
 Image.open(ROOT.parent / 'Logo para paleta de colores.jpeg').save(A / 'identidad.webp', quality=92)
 
+
+# ---------- imagen para compartir (WhatsApp, redes) ----------
+from PIL import ImageDraw, ImageFont, ImageFilter
+SITE = 'https://sefiro888.github.io/cerrajerialimited/'
+
+
+def make_og():
+    W, H = 1200, 630
+    bgname = 'hero-home' if (A / 'hero-home.webp').exists() else 'hero'
+    bg = Image.open(A / (bgname + '.webp')).convert('RGB')
+    r = max(W / bg.width, H / bg.height)
+    bg = bg.resize((round(bg.width * r), round(bg.height * r)), Image.LANCZOS)
+    bg = bg.crop((bg.width - W, (bg.height - H) // 2, bg.width, (bg.height - H) // 2 + H))
+    shade = Image.new('RGBA', (W, H))
+    px = shade.load()
+    for x in range(W):
+        a = int(250 - 190 * min(x / (W * .85), 1))
+        for y in range(H):
+            px[x, y] = (9, 9, 11, a)
+    bg = Image.alpha_composite(bg.convert('RGBA'), shade)
+    d = ImageDraw.Draw(bg)
+    logo = Image.open(A / 'identidad.webp').convert('RGB').resize((200, 200), Image.LANCZOS)
+    mask = Image.new('L', (200, 200), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, 199, 199), fill=255)
+    bg.paste(logo, (70, 70), mask)
+    d.ellipse((68, 68, 272, 272), outline=(255, 255, 255, 70), width=2)
+    f = str(A / 'barlow-condensed.ttf')
+    d.text((70, 305), 'CERRAJERÍA', font=ImageFont.truetype(f, 112), fill=(255, 255, 255))
+    d.text((70, 405), 'LIMITED', font=ImageFont.truetype(f, 112), fill=(229, 34, 47))
+    d.rectangle((70, 540, 130, 544), fill=(229, 34, 47))
+    d.text((70, 556), 'URGENCIAS 24 H · GUADALAJARA Y MADRID · 672 826 060', font=ImageFont.truetype(f, 30), fill=(230, 230, 235))
+    bg.convert('RGB').save(A / 'og-image.jpg', quality=84, optimize=True)
+
+
+make_og()
+
 PHONE = '672826060'
 PHONE_FMT = '672 826 060'
 TEL = 'tel:+34' + PHONE
@@ -519,10 +555,10 @@ def build_page(filename, p, extra_cta=True):
     schema_html = ''.join('<script type="application/ld+json">%s</script>' % json.dumps(s, ensure_ascii=False) for s in schema)
     body = p['body'] + (related(filename) if filename in SERVICE_PAGES and filename != 'servicios.html' else '')
     return ('<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>%s | Cerrajería Limited</title>'
-            '<meta name="description" content="%s"><meta name="theme-color" content="#09090b"><meta name="robots" content="noindex,nofollow"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">'
+            '<meta name="description" content="%s"><meta property="og:type" content="website"><meta property="og:locale" content="es_ES"><meta property="og:site_name" content="Cerrajería Limited"><meta property="og:title" content="%s | Cerrajería Limited"><meta property="og:description" content="%s"><meta property="og:url" content="' + SITE + '%s"><meta property="og:image" content="' + SITE + 'assets/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Cerrajería Limited, cerrajería de coches 24 horas en Guadalajara y Madrid"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#09090b"><meta name="robots" content="noindex,nofollow"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">'
             '<link rel="stylesheet" href="assets/style.css"><script>document.documentElement.classList.add("js")</script><script defer src="assets/app.js"></script>%s</head><body>'
             '<a class="skip-link" href="#contenido">Saltar al contenido</a>%s<main>%s<div id="contenido">%s</div>%s</main>%s</body></html>') % (
-        p['title'], p['intro'], schema_html, header(filename), hero, body, CTA if extra_cta else '', footer())
+        p['title'], p['intro'], p['title'], p['intro'], '' if filename == 'index.html' else filename, schema_html, header(filename), hero, body, CTA if extra_cta else '', footer())
 
 
 for fn, p in pages.items():
