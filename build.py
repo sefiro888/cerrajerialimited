@@ -99,13 +99,16 @@ def faq_section(kicker, h, items):
     return sec('<div>' + heading(kicker, h, 'Lo que más nos preguntan antes de llamar. Si tu duda no está aquí, escríbenos por WhatsApp.') + '</div>' + faq(items), 'faq-section')
 
 
+POS = {'taller-movil': ' style="object-position:25% center"', 'apertura-coche': ' style="object-position:40% center"', 'van-guadalajara': ' style="object-position:60% center"'}
+
+
 def split(kicker, h, paras, image='keys', items=None, reverse=False, cta=None, label='CERRAJERÍA LIMITED / AUTOMOCIÓN', dark=False):
     body = ''.join('<p data-reveal>%s</p>' % p for p in paras)
     cta = cta or btn()
     return sec(
-        '<div class="photo-wrap" data-reveal><img src="assets/%s.webp" loading="lazy" alt="Imagen ilustrativa de cerrajería de automoción">'
+        '<div class="photo-wrap" data-reveal><img src="assets/%s.webp" loading="lazy" alt="Imagen ilustrativa de cerrajería de automoción"%s>'
         '<span class="photo-label">%s</span></div><div>%s%s%s<div data-reveal>%s</div></div>'
-        % (image, label, heading(kicker, h), body, checks(items) if items else '', cta),
+        % (image, POS.get(image, ''), label, heading(kicker, h), body, checks(items) if items else '', cta),
         'split%s%s' % (' reverse' if reverse else '', ' dark-section' if dark else ''))
 
 
